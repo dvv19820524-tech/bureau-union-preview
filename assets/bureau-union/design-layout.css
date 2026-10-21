@@ -1,65 +1,474 @@
 /* Shared compact service-page typography, cards and spacing. Header and footer: shared-layout.css. */
-:is(.design-page,.custom-training-page,.about-page) main .container{width:min(calc(100% - 36px),1220px)}
-:is(.design-page,.custom-training-page,.about-page) .design-flow{position:relative;isolation:isolate;overflow:hidden}
-:is(.design-page,.custom-training-page,.about-page) .design-flow:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("doorlopende-bogen.svg") center/100% 100% no-repeat}
-:is(.design-page,.custom-training-page,.about-page) .design-flow>main>section>.container,:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer>.container{position:relative;z-index:2}
-:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer{isolation:auto}
-:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer:before{display:none}
-:is(.design-page,.custom-training-page,.about-page) .page-hero{padding:26px 0 30px;background:#fff}
-:is(.design-page,.custom-training-page,.about-page) .page-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-:is(.design-page,.custom-training-page,.about-page) .breadcrumb{margin:0 0 14px;font-size:.85rem}
-:is(.design-page,.custom-training-page,.about-page) .eyebrow{font-size:.78rem;margin-bottom:8px}
-:is(.design-page,.custom-training-page,.about-page) .eyebrow:before{width:22px}
-:is(.design-page,.custom-training-page,.about-page) .page-hero h1{font-size:clamp(1.9rem,3vw,2.65rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 14px;color:#004aad}
-:is(.design-page,.custom-training-page,.about-page) .page-hero h1 span{color:#004aad}
-:is(.design-page,.custom-training-page,.about-page) .page-hero .lead{font-size:1rem;line-height:1.55;margin:0 0 18px;color:#456682}
-:is(.design-page,.custom-training-page,.about-page) .btn{border-radius:11px;padding:11px 17px;font-size:.95rem}
-:is(.design-page,.custom-training-page,.about-page) .btn-primary{background:linear-gradient(135deg,#2ba965,#219253)}
-:is(.design-page,.custom-training-page,.about-page) .btn-primary:hover{background:#1f784a}
-:is(.design-page,.custom-training-page,.about-page) .hero-actions{gap:10px}
-:is(.design-page,.custom-training-page,.about-page) .hero-panel{background:#fff;color:#456682;border:1px solid #e0edf7;border-radius:6px;padding:22px;box-shadow:0 3px 12px rgba(0,74,173,.035)}
-:is(.design-page,.custom-training-page,.about-page) .hero-panel h2{color:#004aad;font-size:1.3rem;line-height:1.25;margin:0 0 10px;letter-spacing:-.015em}
-:is(.design-page,.custom-training-page,.about-page) .hero-panel p{font-size:.95rem;line-height:1.5;margin:0;opacity:1}
-:is(.design-page,.custom-training-page,.about-page) .mini-grid{grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
-:is(.design-page,.custom-training-page,.about-page) .mini{padding:10px 12px;font-size:.85rem;line-height:1.35;background:#edf7fe;color:#004aad;border:1px solid #e0edf7;border-radius:6px}
-:is(.design-page,.custom-training-page,.about-page) main>.section{padding:26px 0 30px}
-:is(.design-page,.custom-training-page,.about-page) .design-support{background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff)}
-:is(.design-page,.custom-training-page,.about-page) .design-approach{background:#fff;scroll-margin-top:180px}
-:is(.design-page,.custom-training-page,.about-page) .section-heading{max-width:none;margin-bottom:16px}
-:is(.design-page,.custom-training-page,.about-page) .section-heading h2{font-size:clamp(1.55rem,2.3vw,2rem);line-height:1.15;letter-spacing:-.025em;color:#004aad;margin:0 0 7px}
-:is(.design-page,.custom-training-page,.about-page) .section-heading p{font-size:.95rem;line-height:1.45;color:#456682;margin:0;max-width:1000px}
-:is(.design-page,.custom-training-page,.about-page) .design-support .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-:is(.design-page,.custom-training-page,.about-page) .design-support .card{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:center;gap:14px;padding:16px;background:#fff;border:1px solid #e0edf7;border-radius:6px;box-shadow:0 3px 12px rgba(0,74,173,.035)}
-:is(.design-page,.custom-training-page,.about-page) .design-support .card img{width:76px;height:76px}
-:is(.design-page,.custom-training-page,.about-page) .design-support .card h3{color:#004aad;font-size:1.05rem;line-height:1.2;margin:0 0 7px}
-:is(.design-page,.custom-training-page,.about-page) .design-support .card p{font-size:.9rem;line-height:1.4;color:#456682;margin:0}
-:is(.design-page,.custom-training-page,.about-page) .process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:step}
-:is(.design-page,.custom-training-page,.about-page) .process-step{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;align-content:start;padding:15px;border:1px solid #e0edf7;border-radius:6px;box-shadow:0 3px 12px rgba(0,74,173,.035);background:#fff;counter-increment:step}
-:is(.design-page,.custom-training-page,.about-page) .process-step:before{content:counter(step);grid-column:1;grid-row:1/3;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf7fe;color:#004aad;font-size:.9rem;font-weight:700;margin:0}
-:is(.design-page,.custom-training-page,.about-page) .process-step h3{grid-column:2;color:#004aad;font-size:1.05rem;line-height:1.2;margin:0 0 7px}
-:is(.design-page,.custom-training-page,.about-page) .process-step p{grid-column:2;font-size:.9rem;line-height:1.4;color:#456682;margin:0}
-:is(.design-page,.custom-training-page,.about-page) main>.design-contact{padding:24px 0;background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff)}
-:is(.design-page,.custom-training-page,.about-page) .callout{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;gap:28px;color:#004aad}
-:is(.design-page,.custom-training-page,.about-page) .callout h2{font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.15;letter-spacing:-.025em;margin:0 0 8px;color:#004aad}
-:is(.design-page,.custom-training-page,.about-page) .callout p{font-size:.95rem;line-height:1.45;color:#456682;opacity:1;margin:0}
-:is(.design-page,.custom-training-page,.about-page) .callout .btn{background:linear-gradient(135deg,#2ba965,#219253);color:#fff;white-space:nowrap;box-shadow:0 6px 16px rgba(33,146,83,.12)}
-@media(max-width:1080px){:is(.design-page,.custom-training-page,.about-page) .page-hero-grid{grid-template-columns:1fr;gap:20px}:is(.design-page,.custom-training-page,.about-page) .design-support .grid-3,:is(.design-page,.custom-training-page,.about-page) .process{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){:is(.design-page,.custom-training-page,.about-page) .design-approach{scroll-margin-top:155px}:is(.design-page,.custom-training-page,.about-page) .page-hero{padding:22px 0}:is(.design-page,.custom-training-page,.about-page) main>.section{padding:22px 0}:is(.design-page,.custom-training-page,.about-page) .hero-panel{padding:18px}:is(.design-page,.custom-training-page,.about-page) .callout{display:block}:is(.design-page,.custom-training-page,.about-page) .callout .btn{display:inline-flex;margin-top:16px;width:auto;white-space:normal}}
-@media(max-width:580px){:is(.design-page,.custom-training-page,.about-page) .design-support .grid-3,:is(.design-page,.custom-training-page,.about-page) .process{grid-template-columns:1fr}:is(.design-page,.custom-training-page,.about-page) .design-support .card{padding:16px;gap:12px}:is(.design-page,.custom-training-page,.about-page) .process-step{padding:16px}:is(.design-page,.custom-training-page,.about-page) .hero-actions .btn{width:100%}}
+:is(.design-page,.custom-training-page,.about-page) main .container {
+  width: min(calc(100% - 36px),1220px);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-flow {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-flow:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url("doorlopende-bogen.svg") center/100% 100% no-repeat;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-flow>main>section>.container,:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer>.container {
+  position: relative;
+  z-index: 2;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer {
+  isolation: auto;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-flow>.site-footer:before {
+  display: none;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .page-hero {
+  padding: 26px 0 30px;
+  background: #fff;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .breadcrumb {
+  margin: 0 0 14px;
+  font-size: .85rem;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .eyebrow {
+  font-size: .78rem;
+  margin-bottom: 8px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .eyebrow:before {
+  width: 22px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .page-hero h1 {
+  font-size: clamp(1.9rem,3vw,2.65rem);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+  margin: 0 0 14px;
+  color: #004aad;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .page-hero h1 span {
+  color: #004aad;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .page-hero .lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  color: #456682;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .btn {
+  border-radius: 11px;
+  padding: 11px 17px;
+  font-size: .95rem;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .btn-primary {
+  background: linear-gradient(135deg,#2ba965,#219253);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .btn-primary:hover {
+  background: #1f784a;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .hero-actions {
+  gap: 10px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .hero-panel {
+  background: #fff;
+  color: #456682;
+  border: 1px solid #e0edf7;
+  border-radius: 6px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0,74,173,.035);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .hero-panel h2 {
+  color: #004aad;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  letter-spacing: -.015em;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .hero-panel p {
+  font-size: .95rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 1;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .mini-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .mini {
+  padding: 10px 12px;
+  font-size: .85rem;
+  line-height: 1.35;
+  background: #edf7fe;
+  color: #004aad;
+  border: 1px solid #e0edf7;
+  border-radius: 6px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) main>.section {
+  padding: 26px 0 30px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support {
+  background: linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-approach {
+  background: #fff;
+  scroll-margin-top: 180px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .section-heading {
+  max-width: none;
+  margin-bottom: 16px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .section-heading h2 {
+  font-size: clamp(1.55rem,2.3vw,2rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  color: #004aad;
+  margin: 0 0 7px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .section-heading p {
+  font-size: .95rem;
+  line-height: 1.45;
+  color: #456682;
+  margin: 0;
+  max-width: 1000px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 14px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support .card {
+  display: grid;
+  grid-template-columns: 76px minmax(0,1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e0edf7;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(0,74,173,.035);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support .card img {
+  width: 76px;
+  height: 76px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support .card h3 {
+  color: #004aad;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin: 0 0 7px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .design-support .card p {
+  font-size: .9rem;
+  line-height: 1.4;
+  color: #456682;
+  margin: 0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .process {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 14px;
+  counter-reset: step;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .process-step {
+  display: grid;
+  grid-template-columns: 30px minmax(0,1fr);
+  column-gap: 10px;
+  align-content: start;
+  padding: 15px;
+  border: 1px solid #e0edf7;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(0,74,173,.035);
+  background: #fff;
+  counter-increment: step;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .process-step:before {
+  content: counter(step);
+  grid-column: 1;
+  grid-row: 1/3;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edf7fe;
+  color: #004aad;
+  font-size: .9rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .process-step h3 {
+  grid-column: 2;
+  color: #004aad;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin: 0 0 7px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .process-step p {
+  grid-column: 2;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: #456682;
+  margin: 0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) main>.design-contact {
+  padding: 24px 0;
+  background: linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .callout {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  gap: 28px;
+  color: #004aad;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .callout h2 {
+  font-size: clamp(1.4rem,2.2vw,1.85rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin: 0 0 8px;
+  color: #004aad;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .callout p {
+  font-size: .95rem;
+  line-height: 1.45;
+  color: #456682;
+  opacity: 1;
+  margin: 0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .callout .btn {
+  background: linear-gradient(135deg,#2ba965,#219253);
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(33,146,83,.12);
+}
+
+@media (max-width:1080px) {
+  :is(.design-page,.custom-training-page,.about-page) .page-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .design-support .grid-3,:is(.design-page,.custom-training-page,.about-page) .process {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:760px) {
+  :is(.design-page,.custom-training-page,.about-page) .design-approach {
+    scroll-margin-top: 155px;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .page-hero {
+    padding: 22px 0;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) main>.section {
+    padding: 22px 0;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .hero-panel {
+    padding: 18px;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .callout {
+    display: block;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .callout .btn {
+    display: inline-flex;
+    margin-top: 16px;
+    width: auto;
+    white-space: normal;
+  }
+}
+
+@media (max-width:580px) {
+  :is(.design-page,.custom-training-page,.about-page) .design-support .grid-3,:is(.design-page,.custom-training-page,.about-page) .process {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .design-support .card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .process-step {
+    padding: 16px;
+  }
+
+  :is(.design-page,.custom-training-page,.about-page) .hero-actions .btn {
+    width: 100%;
+  }
+}
 
 /* Short, keyboard-accessible explanations for the four learning-design categories. */
-:is(.design-page,.custom-training-page,.about-page) button.mini{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;font-family:inherit;font-weight:500;cursor:pointer;min-height:44px;transition:background .15s ease,border-color .15s ease}
-:is(.design-page,.custom-training-page,.about-page) button.mini:hover{background:#e1f1fc;border-color:#8fbce0}
-:is(.design-page,.custom-training-page,.about-page) button.mini:focus-visible{outline:3px solid #004aad;outline-offset:3px}
-:is(.design-page,.custom-training-page,.about-page) .mini-info-icon{display:grid;place-items:center;flex:none;width:18px;height:18px;border:1px solid #6799bf;border-radius:50%;font-size:.75rem;font-weight:700;line-height:1}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog{width:min(600px,calc(100vw - 32px));max-height:calc(100dvh - 40px);padding:0;border:1px solid #cbdfee;border-radius:12px;background:#fff;color:#456682;box-shadow:0 20px 70px rgba(0,47,114,.22);overflow:auto}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog::backdrop{background:rgba(0,34,75,.38)}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-header{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:18px 22px;background:#edf7fe;border-bottom:1px solid #dcebf6}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-header h2{margin:0;color:#004aad;font-size:1.3rem;line-height:1.25}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-close{display:grid;place-items:center;flex:none;width:36px;height:36px;padding:0;border:1px solid #b8d3e8;border-radius:6px;background:#fff;color:#004aad;font:26px/1 Arial,sans-serif;cursor:pointer}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy{padding:20px 22px 0}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy h3{margin:0 0 7px;color:#004aad;font-size:1.05rem;line-height:1.3}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy p{margin:0 0 18px;font-size:1rem;line-height:1.55}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog-actions{display:flex;justify-content:flex-end;padding:0 22px 20px}
-:is(.design-page,.custom-training-page,.about-page) .info-dialog button:focus-visible,:is(.design-page,.custom-training-page,.about-page) .info-dialog a:focus-visible{outline:3px solid #004aad;outline-offset:3px}
-@media(prefers-reduced-motion:reduce){:is(.design-page,.custom-training-page,.about-page) button.mini{transition:none}}
+:is(.design-page,.custom-training-page,.about-page) button.mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background .15s ease,border-color .15s ease;
+}
+
+:is(.design-page,.custom-training-page,.about-page) button.mini:hover {
+  background: #e1f1fc;
+  border-color: #8fbce0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) button.mini:focus-visible {
+  outline: 3px solid #004aad;
+  outline-offset: 3px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .mini-info-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #6799bf;
+  border-radius: 50%;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog {
+  width: min(600px,calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  padding: 0;
+  border: 1px solid #cbdfee;
+  border-radius: 12px;
+  background: #fff;
+  color: #456682;
+  box-shadow: 0 20px 70px rgba(0,47,114,.22);
+  overflow: auto;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog::backdrop {
+  background: rgba(0,34,75,.38);
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-header {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: #edf7fe;
+  border-bottom: 1px solid #dcebf6;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-header h2 {
+  margin: 0;
+  color: #004aad;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #b8d3e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #004aad;
+  font: 26px/1 Arial,sans-serif;
+  cursor: pointer;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy {
+  padding: 20px 22px 0;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy h3 {
+  margin: 0 0 7px;
+  color: #004aad;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-copy p {
+  margin: 0 0 18px;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 22px 20px;
+}
+
+:is(.design-page,.custom-training-page,.about-page) .info-dialog button:focus-visible,:is(.design-page,.custom-training-page,.about-page) .info-dialog a:focus-visible {
+  outline: 3px solid #004aad;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  :is(.design-page,.custom-training-page,.about-page) button.mini {
+    transition: none;
+  }
+}

@@ -9,18 +9,33 @@
   const valid = () => {
     try {
       const saved = JSON.parse(localStorage.getItem(key));
-      return saved && saved.version === 1 && Number.isFinite(saved.savedAt) && saved.savedAt <= Date.now() && Date.now() - saved.savedAt < lifetime;
-    } catch { return false; }
+      return (
+        saved &&
+        saved.version === 1 &&
+        Number.isFinite(saved.savedAt) &&
+        saved.savedAt <= Date.now() &&
+        Date.now() - saved.savedAt < lifetime
+      );
+    } catch {
+      return false;
+    }
   };
   banner.hidden = Boolean(valid());
   document.body.append(banner);
   let opener;
   banner.querySelector('button').addEventListener('click', () => {
-    try { localStorage.setItem(key, JSON.stringify({version: 1, savedAt: Date.now()})); } catch { /* Site remains usable when browser storage is unavailable. */ }
+    try {
+      localStorage.setItem(
+        key,
+        JSON.stringify({ version: 1, savedAt: Date.now() })
+      );
+    } catch {
+      /* Site remains usable when browser storage is unavailable. */
+    }
     banner.hidden = true;
     if (opener) opener.focus();
   });
-  document.querySelectorAll('[data-cookie-info]').forEach(button => {
+  document.querySelectorAll('[data-cookie-info]').forEach((button) => {
     button.addEventListener('click', () => {
       opener = button;
       banner.hidden = false;

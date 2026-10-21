@@ -1,11 +1,50 @@
-.home-page .continuous-sections{position:relative;isolation:isolate}
-.home-page .continuous-sections:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("doorlopende-bogen.svg?boven=6") center/100% 100% no-repeat}
-.home-page .continuous-sections>main>section,.home-page .continuous-sections>main>#onze-aanpak,.home-page .continuous-sections>main>#ontwikkelvraag{isolation:auto}
-.home-page .continuous-sections>main>.photo-hero{isolation:isolate}
-.home-page .continuous-sections>main>section>.container{position:relative;z-index:2}
-.home-page .continuous-sections>main>.reference-trustbar:before,.home-page .continuous-sections>main>#onze-aanpak:before,.home-page .continuous-sections>main>#ontwikkelvraag:before{display:none}
-.home-page .continuous-sections>main>#diensten,.home-page .continuous-sections>main>#elektronische-leeromgeving{background:#fff}
-.home-page .continuous-sections>main>#onze-aanpak{background:linear-gradient(110deg,#e9f6ff 0%,#f1f9ff 52%,#e7f4ff 100%)}
+.home-page .continuous-sections {
+  position: relative;
+  isolation: isolate;
+}
 
-.home-page .continuous-sections>.site-footer{position:relative;isolation:auto;background:#fff;border-top:0}
-.home-page .continuous-sections>.site-footer>.container{position:relative;z-index:2}
+.home-page .continuous-sections:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url("doorlopende-bogen.svg?boven=6") center/100% 100% no-repeat;
+}
+
+.home-page .continuous-sections>main>section,.home-page .continuous-sections>main>#onze-aanpak,.home-page .continuous-sections>main>#ontwikkelvraag {
+  isolation: auto;
+}
+
+.home-page .continuous-sections>main>.photo-hero {
+  isolation: isolate;
+}
+
+.home-page .continuous-sections>main>section>.container {
+  position: relative;
+  z-index: 2;
+}
+
+.home-page .continuous-sections>main>.reference-trustbar:before,.home-page .continuous-sections>main>#onze-aanpak:before,.home-page .continuous-sections>main>#ontwikkelvraag:before {
+  display: none;
+}
+
+.home-page .continuous-sections>main>#diensten,.home-page .continuous-sections>main>#elektronische-leeromgeving {
+  background: #fff;
+}
+
+.home-page .continuous-sections>main>#onze-aanpak {
+  background: linear-gradient(110deg,#e9f6ff 0%,#f1f9ff 52%,#e7f4ff 100%);
+}
+
+.home-page .continuous-sections>.site-footer {
+  position: relative;
+  isolation: auto;
+  background: #fff;
+  border-top: 0;
+}
+
+.home-page .continuous-sections>.site-footer>.container {
+  position: relative;
+  z-index: 2;
+}

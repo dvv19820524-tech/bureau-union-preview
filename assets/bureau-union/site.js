@@ -13,9 +13,13 @@
       const open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
-    nav.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-    document.addEventListener('click', e => {
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closeMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+    document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !toggle.contains(e.target)) closeMenu();
     });
   }
@@ -25,7 +29,7 @@
   const status = form.querySelector('[data-form-status]');
   const submit = form.querySelector('[type="submit"]');
 
-  form.addEventListener('submit', async event => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
@@ -35,7 +39,9 @@
     const payload = {
       name: String(data.get('name') || '').trim(),
       email: String(data.get('email') || '').trim(),
-      message: organisation ? `Organisatie: ${organisation}\n\n${message}` : message,
+      message: organisation
+        ? `Organisatie: ${organisation}\n\n${message}`
+        : message,
       website: String(data.get('website') || ''),
       source: window.location.pathname
     };
@@ -45,16 +51,24 @@
 
     try {
       const response = await fetch('/api/contact', {
-        method: 'POST', credentials: 'same-origin',
-        headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(payload)
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok || !result.ok) throw new Error(result.message || 'Verzenden is niet gelukt.');
+      if (!response.ok || !result.ok)
+        throw new Error(result.message || 'Verzenden is niet gelukt.');
       form.reset();
-      if (status) status.textContent = result.message || 'Bedankt. Je bericht is verzonden.';
+      if (status)
+        status.textContent =
+          result.message || 'Bedankt. Je bericht is verzonden.';
     } catch (error) {
-      if (status) status.textContent = `${error.message || 'Verzenden lukt nu niet.'} Je kunt ook mailen naar dvliet@bureau-union.nl.`;
+      if (status)
+        status.textContent = `${error.message || 'Verzenden lukt nu niet.'} Je kunt ook mailen naar dvliet@bureau-union.nl.`;
     } finally {
       if (submit) submit.disabled = false;
     }

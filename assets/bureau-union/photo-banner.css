@@ -1,35 +1,176 @@
-:is(.home-page,.training-detail-page) .photo-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:350px;padding:36px 0;background:#f6faff}
-:is(.home-page,.training-detail-page) .photo-hero .hero-photo{position:absolute;inset:0 0 0 auto;z-index:-2;width:62%;height:100%;object-fit:cover;object-position:50% 0%;border-radius:0}
-:is(.home-page,.training-detail-page) .photo-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(247,251,255,.99) 0%,rgba(247,251,255,.98) 34%,rgba(247,251,255,.94) 46%,rgba(247,251,255,.65) 55%,rgba(247,251,255,0) 70%)}
-:is(.home-page,.training-detail-page) .photo-hero .compact-hero-grid{display:block;position:relative;margin-inline:auto}
-:is(.home-page,.training-detail-page) .photo-hero .hero-copy{max-width:53%}
-:is(.home-page,.training-detail-page) .photo-hero h1{font-size:clamp(2.1rem,3.3vw,3rem);line-height:1.06;letter-spacing:-.035em;max-width:620px;margin-bottom:14px}
-:is(.home-page,.training-detail-page) .photo-hero .lead{font-size:1rem;line-height:1.55;max-width:560px;margin-bottom:18px}
-:is(.home-page,.training-detail-page) .photo-hero .hero-note{font-size:.75rem;line-height:1.45;max-width:510px;margin-top:15px;margin-bottom:0}
-@media(max-width:1100px) and (min-width:761px){:is(.home-page,.training-detail-page) .photo-hero{padding:30px 0;min-height:390px}
-:is(.home-page,.training-detail-page) .photo-hero .hero-copy{max-width:58%}
-:is(.home-page,.training-detail-page) .photo-hero h1{font-size:2.1rem}
-:is(.home-page,.training-detail-page) .photo-hero .lead{font-size:.95rem}
-:is(.home-page,.training-detail-page) .photo-hero .hero-actions{gap:10px}
-:is(.home-page,.training-detail-page) .photo-hero .btn{font-size:.82rem;padding:11px 13px}
-:is(.home-page,.training-detail-page) .photo-hero:before{background:linear-gradient(90deg,rgba(247,251,255,.99) 0%,rgba(247,251,255,.98) 42%,rgba(247,251,255,.85) 54%,transparent 78%)}
+:is(.home-page,.training-detail-page) .photo-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+  padding: 36px 0;
+  background: #f6faff;
 }
-@media(max-width:760px){:is(.home-page,.training-detail-page) .photo-hero{display:block;padding:28px 0 0;min-height:0}
-:is(.home-page,.training-detail-page) .photo-hero:before{display:none}
-:is(.home-page,.training-detail-page) .photo-hero .hero-copy{max-width:none}
-:is(.home-page,.training-detail-page) .photo-hero h1{font-size:2.1rem;max-width:620px}
-:is(.home-page,.training-detail-page) .photo-hero .lead{max-width:620px}
-:is(.home-page,.training-detail-page) .photo-hero .hero-photo{display:block;position:relative;inset:auto;z-index:0;height:230px;width:100%;margin-top:24px;object-position:65% center}
-:is(.home-page,.training-detail-page) .photo-hero .hero-actions{flex-wrap:wrap}
-:is(.home-page,.training-detail-page) .photo-hero .hero-note{max-width:620px}
+
+:is(.home-page,.training-detail-page) .photo-hero .hero-photo {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -2;
+  width: 62%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 0;
 }
-:is(.home-page,.training-detail-page) .photo-hero{border-top:0;background:linear-gradient(180deg,#fff 0%,#f6faff 110px)}
-:is(.home-page,.training-detail-page) .photo-hero:after{content:"";position:absolute;inset:0 0 auto;height:85px;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.87) 18%,rgba(255,255,255,.35) 55%,transparent 100%);z-index:-1;pointer-events:none}
-@media(max-width:760px){:is(.home-page,.training-detail-page) .photo-hero:after{height:45px}
-:is(.home-page,.training-detail-page) .photo-hero .hero-photo{mask-image:linear-gradient(180deg,transparent 0%,#000 40px);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 40px)}
+
+:is(.home-page,.training-detail-page) .photo-hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg,rgba(247,251,255,.99) 0%,rgba(247,251,255,.98) 34%,rgba(247,251,255,.94) 46%,rgba(247,251,255,.65) 55%,rgba(247,251,255,0) 70%);
+}
+
+:is(.home-page,.training-detail-page) .photo-hero .compact-hero-grid {
+  display: block;
+  position: relative;
+  margin-inline: auto;
+}
+
+:is(.home-page,.training-detail-page) .photo-hero .hero-copy {
+  max-width: 53%;
+}
+
+:is(.home-page,.training-detail-page) .photo-hero h1 {
+  font-size: clamp(2.1rem,3.3vw,3rem);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  max-width: 620px;
+  margin-bottom: 14px;
+}
+
+:is(.home-page,.training-detail-page) .photo-hero .lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 560px;
+  margin-bottom: 18px;
+}
+
+:is(.home-page,.training-detail-page) .photo-hero .hero-note {
+  font-size: .75rem;
+  line-height: 1.45;
+  max-width: 510px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+@media (max-width:1100px) and (min-width:761px) {
+  :is(.home-page,.training-detail-page) .photo-hero {
+    padding: 30px 0;
+    min-height: 390px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-copy {
+    max-width: 58%;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .lead {
+    font-size: .95rem;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-actions {
+    gap: 10px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .btn {
+    font-size: .82rem;
+    padding: 11px 13px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero:before {
+    background: linear-gradient(90deg,rgba(247,251,255,.99) 0%,rgba(247,251,255,.98) 42%,rgba(247,251,255,.85) 54%,transparent 78%);
+  }
+}
+
+@media (max-width:760px) {
+  :is(.home-page,.training-detail-page) .photo-hero {
+    display: block;
+    padding: 28px 0 0;
+    min-height: 0;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero:before {
+    display: none;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-copy {
+    max-width: none;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero h1 {
+    font-size: 2.1rem;
+    max-width: 620px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .lead {
+    max-width: 620px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-photo {
+    display: block;
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    height: 230px;
+    width: 100%;
+    margin-top: 24px;
+    object-position: 65% center;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-note {
+    max-width: 620px;
+  }
+}
+
+:is(.home-page,.training-detail-page) .photo-hero {
+  border-top: 0;
+  background: linear-gradient(180deg,#fff 0%,#f6faff 110px);
+}
+
+:is(.home-page,.training-detail-page) .photo-hero:after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 85px;
+  background: linear-gradient(180deg,#fff 0%,rgba(255,255,255,.87) 18%,rgba(255,255,255,.35) 55%,transparent 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width:760px) {
+  :is(.home-page,.training-detail-page) .photo-hero:after {
+    height: 45px;
+  }
+
+  :is(.home-page,.training-detail-page) .photo-hero .hero-photo {
+    mask-image: linear-gradient(180deg,transparent 0%,#000 40px);
+    -webkit-mask-image: linear-gradient(180deg,transparent 0%,#000 40px);
+  }
 }
 
 /* Let the detail photograph itself fade out, so its left image boundary stays invisible. */
-@media(min-width:761px){.training-detail-page .photo-hero .hero-photo{mask-image:linear-gradient(90deg,transparent 0%,#000 35%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 35%);object-position:65% top}}
+@media (min-width:761px) {
+  .training-detail-page .photo-hero .hero-photo {
+    mask-image: linear-gradient(90deg,transparent 0%,#000 35%);
+    -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 35%);
+    object-position: 65% top;
+  }
+}
 
-.training-detail-page .photo-hero:after{height:40px}
+.training-detail-page .photo-hero:after {
+  height: 40px;
+}

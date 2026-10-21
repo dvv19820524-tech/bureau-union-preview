@@ -1,26 +1,145 @@
-.policy-page .page-hero{padding:26px 0 28px;background:linear-gradient(120deg,#f1f8ff,#fff);overflow:hidden}
-.policy-page .page-hero .breadcrumb{margin:0 0 14px;font-size:.85rem}
-.policy-page .page-hero .eyebrow{margin-bottom:9px}
-.policy-page .page-hero h1{font-size:clamp(1.9rem,3.2vw,2.65rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 12px;color:#004aad}
-.policy-page .page-hero h1 span{color:#004aad}
-.policy-page .page-hero .lead{font-size:1.05rem;line-height:1.5;margin:0;max-width:850px;color:#456682}
-.policy-page main>.section{position:relative;isolation:isolate;padding:26px 0 30px;background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff);overflow:hidden}
-.policy-page main>.section:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("doorlopende-bogen.svg") center/100% 100% no-repeat}
-.policy-page .privacy-grid{max-width:1180px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
-.policy-page .privacy-card{background:#fff;border:1px solid #e0edf7;border-radius:6px;box-shadow:0 3px 12px rgba(0,74,173,.035);padding:18px 20px;min-width:0;scroll-margin-top:185px}
-.policy-page .privacy-card h2{font-size:1.2rem;line-height:1.25;letter-spacing:-.015em;color:#004aad;margin:0 0 9px;scroll-margin-top:200px}
-.policy-page .privacy-card p{font-size:.95rem;line-height:1.5;color:#456682;margin:0 0 10px}
-.policy-page .privacy-card p:last-child{margin-bottom:0}
-.policy-page .privacy-card a{color:#004aad;text-underline-offset:3px;overflow-wrap:anywhere}
-.policy-page .cookie-info-footer{margin-top:8px}
-@media(max-width:760px){.policy-page .privacy-grid{grid-template-columns:1fr;gap:12px}
-.policy-page .privacy-card{padding:16px}
-.policy-page .page-hero{padding:22px 0}
-.policy-page main>.section{padding:20px 0}
-.policy-page .privacy-card h2{font-size:1.15rem}
+.policy-page .page-hero {
+  padding: 26px 0 28px;
+  background: linear-gradient(120deg,#f1f8ff,#fff);
+  overflow: hidden;
+}
+
+.policy-page .page-hero .breadcrumb {
+  margin: 0 0 14px;
+  font-size: .85rem;
+}
+
+.policy-page .page-hero .eyebrow {
+  margin-bottom: 9px;
+}
+
+.policy-page .page-hero h1 {
+  font-size: clamp(1.9rem,3.2vw,2.65rem);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+  margin: 0 0 12px;
+  color: #004aad;
+}
+
+.policy-page .page-hero h1 span {
+  color: #004aad;
+}
+
+.policy-page .page-hero .lead {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 850px;
+  color: #456682;
+}
+
+.policy-page main>.section {
+  position: relative;
+  isolation: isolate;
+  padding: 26px 0 30px;
+  background: linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff);
+  overflow: hidden;
+}
+
+.policy-page main>.section:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("doorlopende-bogen.svg") center/100% 100% no-repeat;
+}
+
+.policy-page .privacy-grid {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.policy-page .privacy-card {
+  background: #fff;
+  border: 1px solid #e0edf7;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(0,74,173,.035);
+  padding: 18px 20px;
+  min-width: 0;
+  scroll-margin-top: 185px;
+}
+
+.policy-page .privacy-card h2 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+  color: #004aad;
+  margin: 0 0 9px;
+  scroll-margin-top: 200px;
+}
+
+.policy-page .privacy-card p {
+  font-size: .95rem;
+  line-height: 1.5;
+  color: #456682;
+  margin: 0 0 10px;
+}
+
+.policy-page .privacy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-page .privacy-card a {
+  color: #004aad;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.policy-page .cookie-info-footer {
+  margin-top: 8px;
+}
+
+@media (max-width:760px) {
+  .policy-page .privacy-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .policy-page .privacy-card {
+    padding: 16px;
+  }
+
+  .policy-page .page-hero {
+    padding: 22px 0;
+  }
+
+  .policy-page main>.section {
+    padding: 20px 0;
+  }
+
+  .policy-page .privacy-card h2 {
+    font-size: 1.15rem;
+  }
 }
 
 /* Juridische toelichting en spronglinks voor voorwaarden. */
-.policy-page .legal-reference{padding-top:10px;border-top:1px solid #e0edf7;font-size:.8rem;line-height:1.5;color:#506a80}
-.policy-page .policy-version{font-size:.8rem;color:#506a80;margin:12px 0}
-.policy-page .policy-jump{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.9rem;color:#004aad}
+.policy-page .legal-reference {
+  padding-top: 10px;
+  border-top: 1px solid #e0edf7;
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #506a80;
+}
+
+.policy-page .policy-version {
+  font-size: .8rem;
+  color: #506a80;
+  margin: 12px 0;
+}
+
+.policy-page .policy-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: .9rem;
+  color: #004aad;
+}

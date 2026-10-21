@@ -1,78 +1,590 @@
 /* Shared header/footer foundation and approved homepage appearance. */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,74,173,.09)}.navbar{display:flex;align-items:center}
-.main-nav{margin-left:auto}
-.main-nav ul{list-style:none;display:flex;align-items:center;gap:4px;padding:0;margin:0}.main-nav a{display:block}
-.main-nav a:hover,.main-nav a[aria-current=page]{color:var(--blue);background:#f6f9ff}
-.nav-actions{display:flex;gap:8px;align-items:center}
-.elo-link{font-weight:750;color:var(--blue);padding:10px 12px;border:1px solid var(--line);border-radius:11px}
-.menu-toggle{display:none;border:0;background:var(--green);color:#fff;border-radius:12px;width:46px;height:46px;align-items:center;justify-content:center;cursor:pointer}
-.menu-toggle span,.menu-toggle:before,.menu-toggle:after{content:"";display:block;width:21px;height:2px;background:currentColor;margin:4px auto;border-radius:2px}.footer-grid{display:grid}.site-footer ul{list-style:none;padding:0;margin:0;display:grid}.footer-bottom{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:1040px){.main-nav{display:none;position:absolute;left:20px;right:20px;top:74px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:10px}
-.main-nav.open{display:block}
-.main-nav ul{display:grid}
-.nav-actions .btn-primary{display:none}
-.menu-toggle{display:flex}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,74,173,.09);
 }
-@media(max-width:680px){
-.elo-link{font-size:.78rem;padding:9px}.footer-bottom{display:block}
+
+.navbar {
+  display: flex;
+  align-items: center;
 }
+
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  display: block;
+}
+
+.main-nav a:hover,.main-nav a[aria-current=page] {
+  color: var(--blue);
+  background: #f6f9ff;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.elo-link {
+  font-weight: 750;
+  color: var(--blue);
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-toggle span,.menu-toggle:before,.menu-toggle:after {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 2px;
+  background: currentColor;
+  margin: 4px auto;
+  border-radius: 2px;
+}
+
+.footer-grid {
+  display: grid;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width:1040px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 74px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 10px;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: grid;
+  }
+
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width:680px) {
+  .elo-link {
+    font-size: .78rem;
+    padding: 9px;
+  }
+
+  .footer-bottom {
+    display: block;
+  }
+}
+
 /* Shared header and footer, based on the approved homepage. */
-.union-layout .site-header{background:rgba(255,255,255,.98);border-bottom:0;box-shadow:none}
-.union-layout .site-header>.container,.union-layout .site-footer>.container{width:min(calc(100% - 36px),1220px)}
-.union-layout .site-header .navbar{min-height:74px}
+.union-layout .site-header {
+  background: rgba(255,255,255,.98);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.union-layout .site-header>.container,.union-layout .site-footer>.container {
+  width: min(calc(100% - 36px),1220px);
+}
+
+.union-layout .site-header .navbar {
+  min-height: 74px;
+}
+
 /* Existing Union artwork on a blue hemisphere. Direction reversed after
    visual feedback; the face is the cut surface of a half sphere. */
-.site-header .brand{min-width:0;display:flex;align-items:center;gap:14px;padding-block:8px 17px;flex-shrink:0}
-.brand-wordmark{display:flex;flex-direction:column;gap:0;color:#004aad;white-space:nowrap;font-family:Arial,Helvetica,sans-serif}
-.brand-name{font-size:72px;line-height:1;font-weight:700;letter-spacing:-.045em}
-.brand-description{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.3;font-weight:600;letter-spacing:-.035em}
-.union-layout .navbar{gap:14px}
-.union-layout .main-nav a{font-size:.875rem;padding:10px 4px;color:#004aad;border-radius:0;position:relative;font-weight:400;white-space:nowrap}
-.union-layout .main-nav ul{gap:9px}
-.union-layout .main-nav a:hover,.union-layout .main-nav a[aria-current]{background:transparent;color:#004aad}
-.union-layout .main-nav a[aria-current]{font-weight:700}
-.union-layout .main-nav a[aria-current]:after{content:"";position:absolute;height:2px;background:#004aad;left:4px;right:4px;bottom:2px}
-.union-layout .nav-actions .btn{font-size:.875rem;padding:13px 17px;gap:16px;white-space:nowrap;border-radius:14px}
-.nav-cta-arrow{display:inline-block;font-size:25px;font-weight:400;line-height:1}
-@media(min-width:1041px){.union-layout .main-nav{flex:1;margin-left:28px}.union-layout .main-nav ul{justify-content:space-between;gap:12px}.union-layout .main-nav a{padding-inline:6px}.union-layout .nav-actions{gap:0}.union-layout .main-nav a[aria-current]:after{left:6px;right:6px}}
-.logo-perspective{position:relative;display:block;width:140.8px;height:140.8px;perspective:600px;flex:none}
-.logo-perspective:after{display:none}
-.logo-solid{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(40deg)}
-.logo-dome-layer{position:absolute;left:50%;top:50%;display:block;width:var(--diameter);height:var(--diameter);border-radius:50%;background:radial-gradient(circle at 25% 18%,#397bd0 0%,#004aad 48%,#003276 100%);transform:translate(-50%,-50%) translateZ(calc(-1.32 * var(--depth)));backface-visibility:hidden}
-.union-layout .brand .logo-face{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;border-radius:50%;background:white;transform:translateZ(.1px);backface-visibility:hidden}
-.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:760px){.site-header .brand{min-width:118.4px}.logo-perspective{width:118.4px;height:118.4px}.logo-dome-layer{transform:translate(-50%,-50%) translateZ(calc(-1.11 * var(--depth)))}}
-@media(min-width:1041px) and (max-width:1280px){.union-layout .navbar{flex-wrap:wrap;justify-content:space-between;padding-bottom:12px}.union-layout .main-nav{order:3;flex-basis:100%}.union-layout .main-nav ul{justify-content:center}.site-header .brand{padding-bottom:10px}}
-@media(max-width:760px){.site-header .brand{gap:10px}.brand-name{font-size:60px}.brand-description{font-size:13.33px}}
-@media(max-width:520px){.logo-perspective{width:78px;height:78px}.logo-dome-layer{transform:translate(-50%,-50%) translateZ(calc(-.73125 * var(--depth)))}.site-header .brand{min-width:0;padding-block:7px 13px;gap:8px}.brand-name{font-size:44px}.brand-description{font-size:9.78px}.union-layout .navbar{gap:8px}.union-layout .elo-link{font-size:.7rem;padding:7px 6px}}
+.site-header .brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 8px 17px;
+  flex-shrink: 0;
+}
 
-.union-layout .site-footer{background:#fff;color:#456682;padding:16px 0 10px;border-top:1px solid #dbeaf5}
-.union-layout .footer-grid{grid-template-columns:1.15fr .8fr 1fr;gap:30px;align-items:start}
-.union-layout .site-footer .brand{min-width:0;display:inline-flex;align-items:center;gap:10.5px;padding:0}
-.union-layout .site-footer .brand:hover{text-decoration:none}
-.union-layout .site-footer .logo-perspective{width:105.6px;height:105.6px;perspective:450px}
-.union-layout .site-footer .logo-dome-layer{transform:translate(-50%,-50%) translateZ(calc(-.99 * var(--depth)))}
-.union-layout .site-footer .brand-name{font-size:54px}
-.union-layout .site-footer .brand-description{font-size:12px}
-@media(max-width:380px){.union-layout .site-footer .brand{gap:9px}.union-layout .site-footer .logo-perspective{width:88px;height:88px;perspective:375px}.union-layout .site-footer .logo-dome-layer{transform:translate(-50%,-50%) translateZ(calc(-.825 * var(--depth)))}.union-layout .site-footer .brand-name{font-size:45px}.union-layout .site-footer .brand-description{font-size:10px}}
-.union-layout .site-footer p{font-size:.95rem;line-height:1.5;max-width:340px;margin:12px 0 0}
-.union-layout .site-footer h3{color:#004aad;font-size:1.08rem;margin:1px 0 7px}
-.union-layout .site-footer ul{gap:4px;font-size:.95rem;line-height:1.4}
-.union-layout .site-footer a:hover{color:#004aad;text-decoration:underline;text-underline-offset:3px}
-.union-layout .site-footer a:focus-visible{outline:2px solid #004aad;outline-offset:4px}
-.union-layout .footer-bottom{color:#56718a;border-top:1px solid #dbeaf5;padding-top:8px;margin-top:12px;font-size:.82rem;line-height:1.4}
-@media(max-width:760px){.union-layout .footer-grid{grid-template-columns:1fr 1fr;gap:16px}.union-layout .footer-grid>div:first-child{grid-column:1/-1}.union-layout .site-footer p{max-width:540px}}
-@media(max-width:480px){.union-layout .footer-grid{grid-template-columns:1fr}.union-layout .footer-bottom{display:grid;gap:6px}}
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #004aad;
+  white-space: nowrap;
+  font-family: Arial,Helvetica,sans-serif;
+}
 
+.brand-name {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -.045em;
+}
 
-.union-layout .site-footer{position:relative;isolation:isolate;border-top:0;overflow:hidden}
-.union-layout .site-footer>.container{position:relative;z-index:2}
-.union-layout:not(.home-page) .site-footer:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("footer-bands.svg") center/100% 100% no-repeat}
-@media(max-width:760px){.union-layout .site-header .navbar{min-height:68px}}
+.brand-description {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
 
-@media(max-width:1040px){.union-layout .site-header .main-nav{top:100%}}
+.union-layout .navbar {
+  gap: 14px;
+}
+
+.union-layout .main-nav a {
+  font-size: .875rem;
+  padding: 10px 4px;
+  color: #004aad;
+  border-radius: 0;
+  position: relative;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.union-layout .main-nav ul {
+  gap: 9px;
+}
+
+.union-layout .main-nav a:hover,.union-layout .main-nav a[aria-current] {
+  background: transparent;
+  color: #004aad;
+}
+
+.union-layout .main-nav a[aria-current] {
+  font-weight: 700;
+}
+
+.union-layout .main-nav a[aria-current]:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #004aad;
+  left: 4px;
+  right: 4px;
+  bottom: 2px;
+}
+
+.union-layout .nav-actions .btn {
+  font-size: .875rem;
+  padding: 13px 17px;
+  gap: 16px;
+  white-space: nowrap;
+  border-radius: 14px;
+}
+
+.nav-cta-arrow {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (min-width:1041px) {
+  .union-layout .main-nav {
+    flex: 1;
+    margin-left: 28px;
+  }
+
+  .union-layout .main-nav ul {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .union-layout .main-nav a {
+    padding-inline: 6px;
+  }
+
+  .union-layout .nav-actions {
+    gap: 0;
+  }
+
+  .union-layout .main-nav a[aria-current]:after {
+    left: 6px;
+    right: 6px;
+  }
+}
+
+.logo-perspective {
+  position: relative;
+  display: block;
+  width: 140.8px;
+  height: 140.8px;
+  perspective: 600px;
+  flex: none;
+}
+
+.logo-perspective:after {
+  display: none;
+}
+
+.logo-solid {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(40deg);
+}
+
+.logo-dome-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+  background: radial-gradient(circle at 25% 18%,#397bd0 0%,#004aad 48%,#003276 100%);
+  transform: translate(-50%,-50%) translateZ(calc(-1.32 * var(--depth)));
+  backface-visibility: hidden;
+}
+
+.union-layout .brand .logo-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 50%;
+  background: white;
+  transform: translateZ(.1px);
+  backface-visibility: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width:760px) {
+  .site-header .brand {
+    min-width: 118.4px;
+  }
+
+  .logo-perspective {
+    width: 118.4px;
+    height: 118.4px;
+  }
+
+  .logo-dome-layer {
+    transform: translate(-50%,-50%) translateZ(calc(-1.11 * var(--depth)));
+  }
+}
+
+@media (min-width:1041px) and (max-width:1280px) {
+  .union-layout .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 12px;
+  }
+
+  .union-layout .main-nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .union-layout .main-nav ul {
+    justify-content: center;
+  }
+
+  .site-header .brand {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width:760px) {
+  .site-header .brand {
+    gap: 10px;
+  }
+
+  .brand-name {
+    font-size: 60px;
+  }
+
+  .brand-description {
+    font-size: 13.33px;
+  }
+}
+
+@media (max-width:520px) {
+  .logo-perspective {
+    width: 78px;
+    height: 78px;
+  }
+
+  .logo-dome-layer {
+    transform: translate(-50%,-50%) translateZ(calc(-.73125 * var(--depth)));
+  }
+
+  .site-header .brand {
+    min-width: 0;
+    padding-block: 7px 13px;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 44px;
+  }
+
+  .brand-description {
+    font-size: 9.78px;
+  }
+
+  .union-layout .navbar {
+    gap: 8px;
+  }
+
+  .union-layout .elo-link {
+    font-size: .7rem;
+    padding: 7px 6px;
+  }
+}
+
+.union-layout .site-footer {
+  background: #fff;
+  color: #456682;
+  padding: 16px 0 10px;
+}
+
+.union-layout .footer-grid {
+  grid-template-columns: 1.15fr .8fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.union-layout .site-footer .brand {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10.5px;
+  padding: 0;
+}
+
+.union-layout .site-footer .brand:hover {
+  text-decoration: none;
+}
+
+.union-layout .site-footer .logo-perspective {
+  width: 105.6px;
+  height: 105.6px;
+  perspective: 450px;
+}
+
+.union-layout .site-footer .logo-dome-layer {
+  transform: translate(-50%,-50%) translateZ(calc(-.99 * var(--depth)));
+}
+
+.union-layout .site-footer .brand-name {
+  font-size: 54px;
+}
+
+.union-layout .site-footer .brand-description {
+  font-size: 12px;
+}
+
+@media (max-width:380px) {
+  .union-layout .site-footer .brand {
+    gap: 9px;
+  }
+
+  .union-layout .site-footer .logo-perspective {
+    width: 88px;
+    height: 88px;
+    perspective: 375px;
+  }
+
+  .union-layout .site-footer .logo-dome-layer {
+    transform: translate(-50%,-50%) translateZ(calc(-.825 * var(--depth)));
+  }
+
+  .union-layout .site-footer .brand-name {
+    font-size: 45px;
+  }
+
+  .union-layout .site-footer .brand-description {
+    font-size: 10px;
+  }
+}
+
+.union-layout .site-footer p {
+  font-size: .95rem;
+  line-height: 1.5;
+  max-width: 340px;
+  margin: 12px 0 0;
+}
+
+.union-layout .site-footer h3 {
+  color: #004aad;
+  font-size: 1.08rem;
+  margin: 1px 0 7px;
+}
+
+.union-layout .site-footer ul {
+  gap: 4px;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.union-layout .site-footer a:hover {
+  color: #004aad;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.union-layout .site-footer a:focus-visible {
+  outline: 2px solid #004aad;
+  outline-offset: 4px;
+}
+
+.union-layout .footer-bottom {
+  color: #56718a;
+  border-top: 1px solid #dbeaf5;
+  padding-top: 8px;
+  margin-top: 12px;
+  font-size: .82rem;
+  line-height: 1.4;
+}
+
+@media (max-width:760px) {
+  .union-layout .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .union-layout .footer-grid>div:first-child {
+    grid-column: 1/-1;
+  }
+
+  .union-layout .site-footer p {
+    max-width: 540px;
+  }
+}
+
+@media (max-width:480px) {
+  .union-layout .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .union-layout .footer-bottom {
+    display: grid;
+    gap: 6px;
+  }
+}
+
+.union-layout .site-footer {
+  position: relative;
+  isolation: isolate;
+  border-top: 0;
+  overflow: hidden;
+}
+
+.union-layout .site-footer>.container {
+  position: relative;
+  z-index: 2;
+}
+
+.union-layout:not(.home-page) .site-footer:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("footer-bands.svg") center/100% 100% no-repeat;
+}
+
+@media (max-width:760px) {
+  .union-layout .site-header .navbar {
+    min-height: 68px;
+  }
+}
+
+@media (max-width:1040px) {
+  .union-layout .site-header .main-nav {
+    top: 100%;
+  }
+}
 
 /* Shared legal links: keep privacy, terms and cookie information together. */
-.union-layout .footer-legal{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:7px 22px;margin-top:6px;font-size:.85rem;line-height:1.4}
-.union-layout .footer-legal a{text-decoration:underline;text-underline-offset:3px}
-@media(max-width:680px){.union-layout .footer-legal{justify-content:flex-start;gap:10px 18px}}
+.union-layout .footer-legal {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px 22px;
+  margin-top: 6px;
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+.union-layout .footer-legal a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width:680px) {
+  .union-layout .footer-legal {
+    justify-content: flex-start;
+    gap: 10px 18px;
+  }
+}

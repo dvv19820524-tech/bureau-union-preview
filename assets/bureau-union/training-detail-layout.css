@@ -68,3 +68,10 @@
 .training-detail-page .training-video-player{border:1px solid #e0edf7;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 3px 12px rgba(0,74,173,.055)}
 .training-detail-page .training-video-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#fff}
 @media(max-width:760px){.training-detail-page .training-video-grid{grid-template-columns:1fr;gap:16px}}
+
+
+/* Future training films use the same 16:9 area without an inactive player. */
+.training-detail-page .training-video-placeholder{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;color:#004aad;background:linear-gradient(135deg,#edf5ff,#f7fbff)}
+.training-detail-page .training-video-placeholder svg{flex:none;opacity:.75}
+.training-detail-page .training-video-placeholder strong{font-size:1.15rem;line-height:1.3}
+.training-detail-page .training-video-placeholder span{font-size:.95rem;line-height:1.4;color:#456682}

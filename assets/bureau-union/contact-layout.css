@@ -1,0 +1,41 @@
+/* Contact page: one source for layout and form styles. Shared header/footer remain in shared-layout.css. */
+.contact-page .page-hero{padding:26px 0 28px;background:linear-gradient(120deg,#f1f8ff,#fff);overflow:hidden}
+.contact-page main .container{width:min(calc(100% - 36px),1220px)}
+.contact-page .page-hero .breadcrumb{margin:0 0 14px;font-size:.85rem}
+.contact-page .page-hero .eyebrow{font-size:.76rem;margin-bottom:9px}
+.contact-page .page-hero .eyebrow:before{width:22px}
+.contact-page .page-hero h1{font-size:clamp(1.9rem,3.2vw,2.65rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 12px;color:#004aad}
+.contact-page .page-hero h1 span{color:#004aad}
+.contact-page .page-hero .lead{font-size:1.05rem;line-height:1.5;margin:0;max-width:850px;color:#456682}
+.contact-page .contact-section{position:relative;overflow:hidden;padding:26px 0 30px;background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff)}
+.contact-page .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;align-items:start}
+.contact-page .contact-card,.contact-page .form{background:#fff;border:1px solid #e0edf7;border-radius:6px;padding:22px;box-shadow:0 3px 12px rgba(0,74,173,.035);color:#456682}
+.contact-page .contact-card h2,.contact-page .form h2{margin:0 0 12px;font-size:1.3rem;line-height:1.25;letter-spacing:-.015em;color:#004aad}
+.contact-page .contact-card p{font-size:.95rem;line-height:1.5;margin:0 0 16px}
+.contact-page .contact-list{display:grid;gap:0;margin:0}
+.contact-page .contact-list>div,.contact-page .contact-list>a{display:block;padding:12px 0;border-top:1px solid #e4eef7}
+.contact-page .contact-list small{display:block;color:#60798e;font-size:.82rem;margin-bottom:3px}
+.contact-page .contact-list strong{display:block;color:#004aad;font-size:1rem;font-weight:600;line-height:1.45;overflow-wrap:anywhere}
+.contact-page .contact-list a:hover strong{text-decoration:underline;text-underline-offset:3px}
+.contact-page .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-page .field{display:grid;gap:6px;margin-bottom:12px}
+.contact-page .field label{font-weight:600;font-size:.9rem;color:#345771}
+.contact-page .field input,.contact-page .field textarea{width:100%;border:1px solid #cbdde9;border-radius:6px;padding:10px 12px;font:inherit;font-size:.95rem;line-height:1.45;color:#263f55;background:#fff}
+.contact-page .field input:focus,.contact-page .field textarea:focus{outline:3px solid rgba(0,74,173,.14);border-color:#004aad}
+.contact-page .field textarea{min-height:120px;resize:vertical}
+.contact-page .contact-honeypot{position:absolute;left:-9999px}
+.contact-page .form .btn{border-radius:11px;padding:11px 17px;font-size:.95rem;background:linear-gradient(135deg,#2ba965,#219253);color:#fff}
+.contact-page .form .btn:hover{background:#1f784a}
+.contact-page .form-note{font-size:.82rem;line-height:1.45;margin:12px 0 0;color:#60798e}
+.contact-page .form-note a{color:#004aad;text-decoration:underline;text-underline-offset:3px}
+.contact-page [data-form-status]{margin:12px 0 0;font-size:.9rem}
+.contact-page [data-form-status]:empty{display:none}
+@media(max-width:760px){.contact-page .contact-grid{grid-template-columns:1fr;gap:14px}.contact-page .page-hero{padding:22px 0}.contact-page .contact-section{padding:20px 0}.contact-page .contact-card,.contact-page .form{padding:18px}}
+@media(max-width:480px){.contact-page .form-row{grid-template-columns:1fr;gap:0}.contact-page .form .btn{width:100%}}
+
+/* One continuous pair of bands across intro, contact area and footer. */
+.contact-page .contact-flow{position:relative;isolation:isolate;overflow:hidden}
+.contact-page .contact-flow:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("contact-flow.svg") center/100% 100% no-repeat}
+.contact-page .contact-flow>main>section>.container,.contact-page .contact-flow>.site-footer>.container{position:relative;z-index:2}
+.contact-page .contact-flow>.site-footer{isolation:auto}
+.contact-page .contact-flow>.site-footer:before{display:none}

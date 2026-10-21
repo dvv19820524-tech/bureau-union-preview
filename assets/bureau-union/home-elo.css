@@ -1,0 +1,13 @@
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving{padding:26px 0 30px}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .section-heading{max-width:none;margin-bottom:16px}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .eyebrow{margin-bottom:8px;font-size:.78rem}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .section-heading h2{font-size:clamp(1.55rem,2.3vw,2rem);line-height:1.15;margin-bottom:7px;letter-spacing:-.025em}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .section-heading p{font-size:.95rem;line-height:1.45;max-width:1080px}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-strip{grid-template-columns:repeat(4,1fr);gap:14px}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step{display:grid;grid-template-columns:76px 1fr;align-items:center;gap:10px;padding:15px;border:1px solid #e7f3fc;border-radius:6px;background:#fff;box-shadow:0 3px 12px rgba(66,155,209,.09)}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step img{width:76px;height:76px}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .step-label{display:block;background:transparent;padding:0;margin:0 0 4px;font-size:.65rem;line-height:1.2;color:#547c9d;letter-spacing:.04em}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step h3{font-size:1.03rem;line-height:1.2;margin:0 0 7px;color:#004aad}
+:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step p{font-size:.875rem;line-height:1.4;margin:0}
+@media(max-width:1080px){:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-strip{grid-template-columns:1fr}:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step{grid-template-columns:88px 1fr}:is(.home-page,.training-overview-page) #elektronische-leeromgeving .route-step img{width:88px;height:88px}}

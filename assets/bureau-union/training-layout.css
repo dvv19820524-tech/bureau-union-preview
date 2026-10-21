@@ -1,0 +1,49 @@
+/* Training overview: reference photo and tiles, using the approved page spacing. */
+.training-overview-page .training-flow{position:relative;isolation:isolate;overflow:hidden}
+.training-overview-page .training-flow:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("doorlopende-bogen.svg") center/100% 100% no-repeat}
+.training-overview-page .training-flow>main>section>.container,.training-overview-page .training-flow>.site-footer>.container{position:relative;z-index:2}
+.training-overview-page .training-flow>.site-footer{isolation:auto;border-top:0}
+.training-overview-page .training-flow>.site-footer:before,.training-overview-page .reference-trustbar:before{display:none}
+.training-overview-page .training-photo-hero{position:relative;isolation:isolate;min-height:350px;padding:36px 0;background:#f6faff;display:flex;align-items:center}
+.training-overview-page .training-banner-art{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.training-overview-page .training-banner-art img,.training-overview-page .training-banner-art svg{position:absolute;left:50%;top:50%;width:max(100%,1170px);height:auto;aspect-ratio:3;transform:translate(-50%,-50%);max-width:none}
+.training-overview-page .training-photo-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#f7fbff 0%,rgba(247,251,255,.98) 26%,rgba(247,251,255,.87) 36%,transparent 48%),linear-gradient(180deg,#fff,transparent 65px)}
+.training-overview-page .compact-hero-grid{display:block}
+.training-overview-page .training-hero-copy{max-width:43%}
+.training-overview-page .compact-hero h1{font-size:clamp(2.1rem,3.3vw,3rem);line-height:1.06;letter-spacing:-.035em;margin:0 0 14px;color:#004aad}
+.training-overview-page .compact-hero .lead{font-size:1rem;line-height:1.55;margin:0 0 18px;color:#456682}
+.training-overview-page .hero-note{font-size:.75rem;line-height:1.45;margin:15px 0 0}
+.training-overview-page .btn{font-size:.95rem}
+.training-overview-page .eyebrow{font-size:.78rem;margin-bottom:8px}
+.training-overview-page .section{padding:26px 0 30px;background:#fff}
+.training-overview-page .section-alt{background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff)}
+.training-overview-page .section-heading{max-width:none;margin-bottom:16px}
+.training-overview-page .section-heading h2{font-size:clamp(1.55rem,2.3vw,2rem);line-height:1.15;letter-spacing:-.025em;color:#004aad;margin:0 0 7px}
+.training-overview-page .section-heading p{font-size:.95rem;line-height:1.45;color:#456682;max-width:1080px;margin:0}
+.training-overview-page .training-grid-refined{grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.training-overview-page .training-tile{grid-column:span 3}
+.training-overview-page .training-tile:nth-child(n+5){grid-column:span 4}
+.training-overview-page .training-tile{border-radius:6px;padding:16px;gap:14px;min-height:0;border-color:#e7f3fc;box-shadow:0 3px 12px rgba(66,155,209,.09);align-items:center}
+.training-overview-page .training-tile .illus-disc{width:96px;height:112px;flex:0 0 96px;border:0;border-radius:0;background:transparent}
+.training-overview-page .training-tile .reference-training-illus{width:96px;height:112px}
+.training-overview-page .training-tile h3{font-size:1.125rem;line-height:1.2;margin:1px 0 7px;color:#004aad}
+.training-overview-page .training-tile p{font-size:.9rem;line-height:1.4;color:#456682}
+.training-overview-page .training-tile .link{font-size:.875rem;line-height:1.3;margin-top:9px}
+.training-overview-page .route-strip,.training-overview-page .principles-grid{gap:14px}
+.training-overview-page .route-step,.training-overview-page .principle{padding:15px;border-radius:6px;border-color:#e7f3fc;box-shadow:0 3px 12px rgba(66,155,209,.09);min-height:0;background:#fff}
+.training-overview-page .route-step h3,.training-overview-page .principle strong{font-size:1.03rem;line-height:1.2;color:#004aad;margin-bottom:7px}
+.training-overview-page .route-step p,.training-overview-page .principle span{font-size:.875rem;line-height:1.4;color:#456682}
+.training-overview-page .decision-strip{padding:0;border:0;border-radius:0;background:transparent;gap:28px}
+.training-overview-page .decision-strip h2{font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.15;letter-spacing:-.025em;color:#004aad;margin:0 0 8px}
+.training-overview-page .decision-strip p{font-size:.95rem;line-height:1.45;color:#456682}
+@media(max-width:1080px){.training-overview-page .training-grid-refined{grid-template-columns:repeat(2,minmax(0,1fr))}.training-overview-page .training-tile,.training-overview-page .training-tile:nth-child(n+5){grid-column:auto}.training-overview-page .training-hero-copy{max-width:48%}.training-overview-page .training-photo-hero{min-height:390px;padding:30px 0}}
+@media(max-width:760px){.training-overview-page .training-grid-refined{grid-template-columns:1fr}.training-overview-page .training-photo-hero{display:block;padding:28px 0 0;min-height:0}.training-overview-page .training-hero-copy{max-width:none}.training-overview-page .training-photo-hero:before{display:none}.training-overview-page .training-banner-art{position:relative;inset:auto;height:240px;margin-top:20px;z-index:0;order:2}.training-overview-page .training-photo-hero{display:flex;flex-direction:column}.training-overview-page .training-banner-art{width:100%}.training-overview-page .training-banner-art img,.training-overview-page .training-banner-art svg{width:720px;left:auto;right:0;transform:translateY(-50%)}.training-overview-page .training-photo-hero>.container{order:1}.training-overview-page .section{padding:22px 0}.training-overview-page .decision-actions{flex-wrap:wrap}}
+@media(max-width:520px){.training-overview-page .training-tile .illus-disc{flex-basis:82px;width:82px;height:96px}.training-overview-page .training-tile .reference-training-illus{width:82px;height:96px}}
+
+/* Quiet emphasis for the four training expectations. */
+.training-overview-page #verwachtingen .principle{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:start;padding:24px 16px;border:1px solid #c8e2f5;border-top:4px solid #3986c7;background:linear-gradient(145deg,#f4faff,#e7f3ff);box-shadow:0 5px 16px rgba(0,74,173,.08)}
+.training-overview-page #verwachtingen .principle img{width:72px;height:72px}
+.training-overview-page #verwachtingen .principle strong{font-size:1.25rem;line-height:1.2;margin:0 0 11px;color:#004aad}
+.training-overview-page #verwachtingen .principle span{font-size:.95rem;line-height:1.45;color:#456682}
+@media(max-width:1100px){.training-overview-page #verwachtingen .principles-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.training-overview-page #verwachtingen .principles-grid{grid-template-columns:1fr}}

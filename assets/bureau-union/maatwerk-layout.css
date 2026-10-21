@@ -1,0 +1,24 @@
+/* Maatwerktraining: shared service layout with a continuous background and eight process steps. */
+.custom-training-page .custom-training-flow{position:relative;isolation:isolate;overflow:hidden}
+.custom-training-page .custom-training-flow:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("doorlopende-bogen.svg") center/100% 100% no-repeat}
+.custom-training-page .custom-training-flow>main>section>.container,.custom-training-page .custom-training-flow>.site-footer>.container{position:relative;z-index:2}
+.custom-training-page .custom-training-flow>.site-footer{isolation:auto;border-top:0}
+.custom-training-page .custom-training-flow>.site-footer:before{display:none}
+.custom-training-page .page-hero,.custom-training-page .custom-process,.custom-training-page .custom-contact{background:linear-gradient(110deg,#e9f6ff,#f1f9ff 52%,#e7f4ff)}
+.custom-training-page .custom-context,.custom-training-page .custom-evaluation{background:#fff}
+.custom-training-page .custom-context .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.custom-training-page .custom-process .process{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.custom-training-page .custom-process .process-step{grid-template-columns:30px minmax(0,1fr);padding:16px;gap:10px;background:#fff}
+.custom-training-page .custom-evaluation .grid-2{gap:14px;align-items:stretch}
+.custom-training-page .info-box{padding:20px;border:1px solid #e0edf7;border-radius:6px;background:#fff;box-shadow:0 3px 12px rgba(0,74,173,.035)}
+.custom-training-page .info-box h2{font-size:1.3rem;line-height:1.25;letter-spacing:-.015em;color:#004aad;margin:0 0 10px}
+.custom-training-page .info-box p,.custom-training-page .info-box li{font-size:.9rem;line-height:1.4;color:#456682}
+.custom-training-page .info-box p{margin:0}
+.custom-training-page .feature-list{margin:0;padding:0;gap:0}
+.custom-training-page .feature-list li{margin:0;padding-left:24px}
+.custom-training-page main>.custom-contact{padding:24px 0}
+.custom-training-page .callout{align-items:center}
+.custom-training-page .callout p{max-width:820px;line-height:1.45}
+@media(max-width:1100px){.custom-training-page .custom-process .process{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.custom-training-page .custom-evaluation .grid-2{grid-template-columns:1fr}.custom-training-page main>.custom-contact{padding:22px 0}}
+@media(max-width:580px){.custom-training-page .custom-context .grid-3{grid-template-columns:1fr}.custom-training-page .custom-process .process{grid-template-columns:1fr}}

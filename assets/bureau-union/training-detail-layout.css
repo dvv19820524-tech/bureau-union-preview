@@ -427,7 +427,7 @@
 
 /* Approved V8 film: user-controlled playback within the compact page layout. */
 .training-detail-page .training-video-section {
-  padding-top: 0;
+  padding-block: 30px;
 }
 
 .training-detail-page .training-video-grid {
@@ -470,6 +470,10 @@
 }
 
 @media (max-width:760px) {
+  .training-detail-page .training-video-section {
+    padding-block: 22px;
+  }
+
   .training-detail-page .training-video-grid {
     grid-template-columns: 1fr;
     gap: 16px;
